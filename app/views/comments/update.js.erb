@@ -1,0 +1,7 @@
+$('#comment_text').val('')
+$('#comment_form').html(
+  '<%= j(render partial: "comments/form") %>'
+)
+$('#comment_table').html(
+  '<%= j(render @comments) %>'
+);
