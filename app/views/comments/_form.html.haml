@@ -2,7 +2,7 @@
 .panel.panel-info
   .panel-heading
     %h4=t '.title', default: [:'helpers.titles.new', 'New %{model}'], model: model_class.model_name.human.titleize
-  = simple_form_for @comment, html: { class: 'form-horizontal' } do |f|
+  = simple_form_for @comment, html: { class: 'form-horizontal' }, remote: true do |f|
     .panel-body
       = f.input :text, label: false, required: true
       = f.input :id, as: :hidden

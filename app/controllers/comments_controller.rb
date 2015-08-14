@@ -7,31 +7,19 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    render :index
   end
 
   def create
-    @comment = Comment.new(comment_params)
-    if @comment.save
-      redirect_to comments_url, notice: 'Comment was successfully created.'
-    else
-      flash[:danger] = 'Faild to create a comment.'
-      render :index
-    end
+    @comment = Comment.create(comment_params)
   end
 
   def update
-    if @comment.update(comment_params)
-      redirect_to comments_url, notice: 'Comment was successfully updated.'
-    else
-      flash[:danger] = 'Faild to update a comment.'
-      render :index
-    end
+    @comment.update(comment_params)
+    @comment = Comment.new
   end
 
   def destroy
     @comment.destroy
-    redirect_to comments_url, notice: 'Comment was successfully destroyed.'
   end
 
   private
