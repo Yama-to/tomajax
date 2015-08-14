@@ -1,0 +1,79 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// custom styles ---------------------//
+body {
+  font-family: Lato, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, sans-serif;
+  font-weight: 300;
+  margin-top: 50px;
+
+  .alert {
+    margin: 5px 0;
+  }
+
+
+  // tables---------------------------//
+  .table-responsive {
+
+    thead tr {
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    tbody tr {
+
+      td {
+        vertical-align: middle;
+
+        a {
+          width: 60px;
+        }
+      }
+    }
+  }
+
+
+  // panels---------------------------//
+  .panel {
+
+    .form-horizontal {
+
+      .panel-body {
+        padding: 0;
+        clear: both;
+
+        .form-group {
+          width: 80%;
+          height: 45px;
+          margin: 0;
+          float: left;
+        }
+
+        .form-control {
+          height: 100%;
+          border: none;
+        }
+
+        .btn {
+          width: 20%;
+          height: 45px;
+          font-weight: bolder;
+          float: right;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+
+
+  // clearfix-----------------------//
+  .clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
