@@ -8,13 +8,7 @@
       %th{style: "width: 50%;"}= model_class.human_attribute_name(:text)
       %th{style: "width: 15%;"}= model_class.human_attribute_name(:updated_at)
       %th{style: "width: 20%;"}=t '.actions', default: t("helpers.actions")
-  %tbody
-    - @comments.each do |comment|
-      %tr
-        %td= comment.id
-        %td= comment.text
-        %td=l comment.updated_at, format: '%I:%M%t%P'
-        %td
-          = link_to t('.edit', default: t("helpers.links.edit")), edit_comment_path(comment), class: 'btn btn-default btn-sm'
-          = link_to t('.destroy', default: t("helpers.links.destroy")), comment_path(comment), method: :delete, data: { confirm: t('.confirm', default: t("helpers.links.confirm", default: 'Are you sure?')) }, class: 'btn btn-sm btn-danger'
-= render partial: "form"
+  %tbody#comment_table
+    = render @comments
+#comment_form
+  = render partial: "form"
