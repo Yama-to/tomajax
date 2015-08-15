@@ -58,3 +58,8 @@ group :development, :test do
 
 end
 
+group :production, :staging do
+  # for heroku deploy
+  gem 'rails_12factor'
+  gem 'pg'
+end
