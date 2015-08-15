@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
-  before_action :set_comment,  only: [:edit, :update, :destroy]
+  http_basic_authenticate_with name: 'tomato', password: 'ajax'
+  before_action :set_comment, only: [:edit, :update, :destroy]
   before_action :get_comments
 
   def index
