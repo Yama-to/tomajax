@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.19'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -60,6 +60,13 @@ end
 
 group :production, :staging do
   # for heroku deploy
-  gem 'rails_12factor'
-  gem 'pg'
+  # gem 'rails_12factor'
+  # gem 'pg'
+  gem 'unicorn'
+  gem 'capistrano',          require: false
+  gem 'capistrano-rails',    require: false
+  gem 'capistrano-rbenv',    require: false
+  gem 'capistrano-bundler',  require: false
+  gem 'capistrano3-unicorn', require: false
+  gem 'slackistrano',        require: false
 end
