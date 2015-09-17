@@ -50,5 +50,4 @@ test:
 production:
   <<: *default
   database: tomajax_production
-  username: tomajax
-  password: <%= ENV['YMTSPACE_DATABASE_PASSWORD'] %>
+  username: root
