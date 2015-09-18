@@ -16,12 +16,12 @@ set :linked_dirs,   fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache',
 set :keep_releases, 3
 
 # set values for slackistrano deployment notifier
-# set :slack_webhook,      'https://hooks.slack.com/services/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'
-# set :slack_icon_url,     'https://s3-ap-northeast-1.amazonaws.com/recruit-tech-camp/images/img_rec.png'
-# set :slack_username,     '就活TECH::CAMP'
-# set :slack_msg_starting, ":slack: #{ENV['USER'] || ENV['USERNAME']} による #{fetch :branch} ブランチの #{fetch :rails_env, 'production'} 環境へのデプロイが始まります。"
-# set :slack_msg_finished, ":slack: #{ENV['USER'] || ENV['USERNAME']} による #{fetch :branch} ブランチの #{fetch :rails_env, 'production'} 環境へのデプロイが成功しました！！"
-# set :slack_msg_failed,   ":slack: #{ENV['USER'] || ENV['USERNAME']} による #{fetch :branch} ブランチの #{fetch :rails_env, 'production'} 環境へのデプロイが失敗しました..."
+set :slack_webhook,      'https://hooks.slack.com/services/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'
+set :slack_icon_url,     'https://s3-ap-northeast-1.amazonaws.com/tomajax/images/tomato3_small.png'
+set :slack_username,     'Tomajax'
+set :slack_msg_starting, ":yamato_mc: #{ENV['USER'] || ENV['USERNAME']} による #{fetch :branch} ブランチの #{fetch :rails_env, 'production'} 環境へのデプロイが始まります。"
+set :slack_msg_finished, ":yamato_mc: #{ENV['USER'] || ENV['USERNAME']} による #{fetch :branch} ブランチの #{fetch :rails_env, 'production'} 環境へのデプロイが成功しました！！"
+set :slack_msg_failed,   ":yamato_mc: #{ENV['USER'] || ENV['USERNAME']} による #{fetch :branch} ブランチの #{fetch :rails_env, 'production'} 環境へのデプロイが失敗しました..."
 
 namespace :deploy do
   desc 'Restart application'
